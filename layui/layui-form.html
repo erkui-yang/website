@@ -4,8 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/layui.css" />
     <title>表单</title>
   </head>
-  <body></body>
+  <body>
+    <div class="layui-form-item one">
+      <input
+        type="text"
+        name="title"
+        required
+        lay-verify="required"
+        placeholder="请输入标题"
+        autocomplete="off"
+        class="layui-input"
+      />
+      <label for="layui-form-label">标签区域</label>
+      <div class="layui-input-block"></div>
+    </div>
+    <div class="two">
+      <select name="city" lay-verify="">
+        <option value="">请选择一个城市</option>
+        <option value="010">北京</option>
+        <option value="021">上海</option>
+        <option value="0571">杭州</option>
+      </select>
+      <select name="city" lay-verify="">
+        <option value="010">北京</option>
+        <option value="021" disabled>上海（禁用效果）</option>
+        <option value="0571" selected>杭州</option>
+      </select>
+      <select name="quiz">
+        <option value="">请选择</option>
+        <optgroup label="城市记忆">
+          <option value="你工作的第一个城市">你工作的第一个城市？</option>
+        </optgroup>
+        <optgroup label="学生时代">
+          <option value="你的工号">你的工号？</option>
+          <option value="你最喜欢的老师">你最喜欢的老师？</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="three">
+      <div class="layui-code layui-box layui-code-view" layui-title="结构">
+        <input type="checkbox" name="" title="写作" checked />
+        <input type="checkbox" name="" title="发呆" />
+        <input type="checkbox" name="" title="禁用" disabled />
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name=""
+          title="写作"
+          lay-skin="primary"
+          checked
+        />
+        <input type="checkbox" name="" title="发呆" lay-skin="primary" />
+        <input
+          type="checkbox"
+          name=""
+          title="禁用"
+          lay-skin="primary"
+          disabled
+        />
+      </div>
+    </div>
+    <div class="four">
+      <input type="checkbox" name="xxx" lay-skin="switch" />
+      <input
+        type="checkbox"
+        name="yyy"
+        lay-skin="switch"
+        lay-text="ON|OFF"
+        checked
+      />
+      <input
+        type="checkbox"
+        name="zzz"
+        lay-skin="switch"
+        lay-text="开启|关闭"
+      />
+      <input type="checkbox" name="aaa" lay-skin="switch" disabled />
+    </div>
+    <div class="five">
+      <input type="radio" name="sex" value="nan" title="男" />
+      <input type="radio" name="sex" value="nv" title="女" checked />
+      <input type="radio" name="sex" value="" title="中性" disabled />
+    </div>
+    <div class="six">
+      <textarea
+        name=""
+        required
+        lay-verify="required"
+        placeholder="请输入"
+        class="layui-textarea"
+      ></textarea>
+    </div>
+    <div class="saven">
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">范围</label>
+          <div class="layui-input-inline" style="width: 100px;">
+            <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="layui-input"
+            />
+          </div>
+          <div class="layui-form-mid">-</div>
+          <div class="layui-input-inline" style="width: 100px;">
+            <input
+              type="text" name="price_max" placeholder="￥" autocomplete="off" class="layui-input"
+            />
+          </div>
+        </div>
+
+        <div class="layui-inline">
+          <label class="layui-form-label">密码</label>
+          <div class="layui-input-inline" style="width: 100px;">
+            <input
+              type="password"
+              name=""
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
