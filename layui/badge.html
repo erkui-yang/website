@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>徽章（圆点/小边框）</title>
+    <link rel="stylesheet" href="../css/layui.css" />
+  </head>
+  <body>
+    <!-- 小圆点，通过 layui-badge-dot 来定义，里面不能加文字 -->
+    <span class="layui-badge-dot"></span>
+    <span class="layui-badge-dot layui-bg-orange"></span>
+    <span class="layui-badge-dot layui-bg-green"></span>
+    <span class="layui-badge-dot layui-bg-cyan"></span>
+    <span class="layui-badge-dot layui-bg-blue"></span>
+    <span class="layui-badge-dot layui-bg-black"></span>
+    <span class="layui-badge-dot layui-bg-gray"></span>
+
+    <!-- 椭圆体，通过 layui-badge 来定义。事实上我们把这个视作为主要使用方式 -->
+    <span class="layui-badge">6</span>
+    <span class="layui-badge">99</span>
+    <span class="layui-badge">61728</span>
+
+    <span class="layui-badge">赤</span>
+    <span class="layui-badge layui-bg-orange">橙</span>
+    <span class="layui-badge layui-bg-green">绿</span>
+    <span class="layui-badge layui-bg-cyan">青</span>
+    <span class="layui-badge layui-bg-blue">蓝</span>
+    <span class="layui-badge layui-bg-black">黑</span>
+    <span class="layui-badge layui-bg-gray">灰</span>
+
+    <!-- 边框体，通过 layui-badge-rim 来定义 -->
+    <span class="layui-badge-rim">6</span>
+    <span class="layui-badge-rim">Hot</span>
+
+    <button class="layui-btn">
+      查看消息
+      <span class="layui-badge layui-bg-gray">1</span>
+    </button>
+    <button class="layui-btn">
+      动态
+      <span class="layui-badge-dot layui-bg-orange"></span>
+    </button>
+    <div class="layui-tab layui-tab-brief">
+      <ul class="layui-tab-title">
+        <li class="layui-this">网站设置</li>
+        <li>用户管理<span class="layui-badge-dot"></span></li>
+        <li>最新邮件<span class="layui-badge">99+</span></li>
+      </ul>
+      <div class="layui-tab-content"></div>
+    </div>
+    <script src="../layui.js"></script>
+    <script>
+      layui.use("element", function() {
+        var element = layui.element;
+      });
+    </script>
+  </body>
+</html>

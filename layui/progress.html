@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>进度条 layui-progress-bar </title>
+    <link rel="stylesheet" href="../css/layui.css" />
+  </head>
+  <body>
+    <div class="layui-progress">
+      <div class="layui-progress-bar layui-bg-orange" lay-percent="60%"></div>
+      <!--lay-percent ：代表进度条的初始百分比-->
+    </div>
+    <br />
+    <div class="layui-progress" lay-showPercent="true">
+      <div class="layui-progress-bar layui-bg-yellow" lay-percent="1/3"></div>
+    </div>
+    <br />
+    <div class="layui-progress" lay-showPercent="yes">
+      <div class="layui-progress-bar layui-bg-red" lay-percent="30%"></div>
+    </div>
+    <br />
+    <div class="layui-progress layui-progress-big" lay-showPercent="yes"><!--layui-progress-big:大号进度条-->
+      <div class="layui-progress-bar layui-bg-green" lay-percent="50%"></div>
+    </div>
+
+    <script src="../layui.js"></script>
+    <script>
+      //注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
+      layui.use("element", function() {
+        var element = layui.element;
+      });
+    </script>
+  </body>
+</html>
